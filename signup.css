@@ -1,0 +1,169 @@
+:root {
+    --bgColor: rgb(255, 255, 255, 0.75);
+}
+
+.noselect, div {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+}
+
+body {
+    grid-template-areas: 
+    "top top top top" 
+    ". . . ."
+    ". main_panel second_form ."
+    ". . . ."
+    "footer footer footer footer" ;
+    grid-template-columns: 1fr 600px 300px 1fr;
+    grid-template-rows: 100px 1fr max-content 1fr 250px;
+    height: 100vh;
+}
+
+form {
+    background-color: var(--bgColor);
+    box-shadow: 1px 1px 5px gray;
+    display: grid;
+    height: max-content;
+    margin: auto;
+    padding: 25px 0px;
+    place-content: start center;
+    width: 100%;
+}
+
+#main_form {
+    grid-area: main_panel;
+    grid-template-areas: 
+    "main_form_header main_form_header"
+    ". ."
+    ". ."
+    ". ."
+    ". ."
+    "policy_checkbox policy_checkbox"
+    "signup_button signup_button";
+    grid-template-columns: 1fr 1fr;
+}
+
+#second_form {
+    grid-area: second_form;
+    grid-template-columns: 1fr;
+}
+
+.second_form_header {
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.main_form_header {
+    font-size: 25px;
+    font-weight: bolder;
+    grid-area: main_form_header;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.text_input {
+    background-color: WhiteSmoke;
+    border: 3px solid rgb(255, 255, 255, 0);
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 5px lightgray;
+    color: black;
+    font-size: 15px;
+    height: 40px;
+    margin: 10px auto;
+    opacity: 0.7;
+    text-indent: 10px;
+    transition: opacity 0.35s;
+    width: 80%;
+}
+
+.text_input:hover {
+    opacity: 0.85;
+}
+
+.text_input:focus {
+    border: 3px solid deepskyblue;
+    opacity: 1;
+    outline: none;
+}
+
+#date_input {
+    background-color: WhiteSmoke;
+    border: 3px solid rgb(255, 255, 255, 0);
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 5px lightgray;
+    font-size: 15px;
+    height: 40px;
+    margin: 10px auto;
+    opacity: 0.7;
+    padding: 1px 2px;
+    text-indent: 10px;
+    transition: opacity 0.35s;
+    width: 80%;
+}
+
+#date_input:hover {
+    opacity: 0.85;
+}
+
+#date_input:focus {
+    border: 3px solid deepskyblue;
+    opacity: 1;
+    outline: none;
+    text-indent: 5px;
+}
+
+.checkbox_area {
+    display: grid;
+    gap: 10px;
+    grid-auto-flow: column;
+    margin: 15px auto;
+    place-content: center;
+    text-align: center;
+}
+
+.checkbox_area > * {
+    margin: auto;
+}
+
+#policy_checkbox_area {
+    grid-area: policy_checkbox;
+}
+
+.button {
+    background-image: linear-gradient(115deg, dodgerblue, fuchsia);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px gray;
+    color: white;
+    display: grid;
+    font-size: 15px;
+    font-weight: bolder;
+    height: 40px;
+    margin: auto;
+    margin-top: 20px;
+    place-content: center;
+    width: 80%;
+}
+
+.button:hover {
+    background-color: steelblue;
+}
+
+.button:active {
+    background-color: midnightblue;
+}
+
+#sup_button {
+    grid-area: signup_button;
+}
+
+#form_text {
+    margin-top: 25px;
+    text-align: center;
+}

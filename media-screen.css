@@ -1,0 +1,46 @@
+@media screen and (max-width: 1600px) {
+    body {
+        grid-template-columns: 220px 1fr 960px 1fr 220px;
+        grid-template-rows: 100px 320px 700px max-content 200px;
+    }
+}
+ 
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-areas:     
+        "top" 
+        "main_panel" 
+        "footer" ;
+        grid-template-columns: 1fr;
+        grid-template-rows: 125px max-content 250px;
+    }
+
+    #header {
+        grid-template-columns: 55px 50px 50px 100px;
+    }
+
+    #brand {
+        display: none;
+    }
+
+    #signup_button {
+        display: none;
+    }
+
+    #login_button {
+        display: none;
+    }
+    
+    #slide_show {
+        display: none;
+    }
+
+    #side_nav {
+        display: none;
+    }
+
+    .footer_item {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}

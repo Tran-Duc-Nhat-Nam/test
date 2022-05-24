@@ -1,0 +1,29 @@
+body {
+    grid-template-areas: 
+    "top top top" 
+    ". main." 
+    "footer footer footer" ;
+    grid-template-columns: 300px 1920px 300px;
+    grid-template-rows: 125px max-content 250px;
+}
+
+#main_text {
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr;
+    height: max-content;
+    padding: 50px 35px;
+    place-content: start center;
+}
+
+.main_text_heading {
+    background: linear-gradient(115deg, deepskyblue, violet);
+    font-size: 35px;
+    font-weight: bolder;
+    margin: auto;
+    width: max-content;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
