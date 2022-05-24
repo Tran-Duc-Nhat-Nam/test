@@ -2,15 +2,6 @@
     --bgColor: rgb(255, 255, 255, 0.75);
 }
 
-.noselect, div {
-    -webkit-touch-callout: none;
-      -webkit-user-select: none;
-       -khtml-user-select: none;
-         -moz-user-select: none;
-          -ms-user-select: none;
-              user-select: none;
-}
-
 body {
     grid-template-areas: 
     "top top top top" 

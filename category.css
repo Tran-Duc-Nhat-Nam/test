@@ -9,24 +9,60 @@ body {
 }
 
 #side_cate {
+    background-color: rgb(255, 255, 255, 0);
+    box-shadow: none;
+    gap: 15px;
     grid-area: side;
     grid-template-columns: 1fr;
     height: max-content;
-    place-content: start;
 }
 
-#side_cate a {
-    background-color: var(--background-color);
+#side_cate div {
     box-shadow: var(--box-shadow);
+}
+
+#side_cate_nav {
+    background-color: black;
+    gap: 1px;
+}
+
+.side_cate_nav_item_header {
+    background-color: white;
+    border: 3px solid white;
+    display: grid;
+    height: 50px;
+    margin-left: -2px;
+    place-content: center;
+    width: 100%;
+}
+
+.side_cate_nav_item {
+    background-color: white;
     color: black;
     display: grid;
     font-size: var(--font-size);
     font-weight: bold;
-    height: 80px;
+    grid-template-columns: 1fr;
+    height: max-content;
     place-content: center;
     text-align: center;
-    transition: transform 0.15s;
-    width: 100%;
+}
+
+.side_cate_nav_sub_item {
+    background-color: gray;
+    color: white;
+    display: none;
+    height: 35px;
+    place-content: center;
+}
+
+
+#side_cate_option {
+
+}
+
+#side_cate_filter {
+
 }
 
 #main_cate {

@@ -45,3 +45,21 @@ function fade() {
   let e = document.getElementById('bd')
   e.style.opacity = 1;
 }
+
+function openSubNav(obj) {
+  var children = obj.children;
+  for (var i = 0; i < children.length; i++)
+  {
+    if (children[i].classList.contains('side_cate_nav_sub_item'))
+    {
+      if (window.getComputedStyle(children[i]).getPropertyValue("display") == 'none')
+      {
+        children[i].style.display = 'grid';
+      }
+      else
+      {
+        children[i].style.display = 'none';
+      }
+    }
+  }
+}
