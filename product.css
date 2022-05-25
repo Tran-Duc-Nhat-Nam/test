@@ -1,0 +1,26 @@
+body {
+    grid-template-areas: 
+    "top top top top top" 
+    "side_nav . product_img product_detail . " 
+    ". . product_img product_detail . " 
+    "footer footer footer footer footer" ;
+    grid-template-columns: 220px 1fr 1000px 500px 2fr;
+    grid-template-rows: 100px max-content max-content 200px;
+}
+
+#product_img {
+    display: grid;
+    grid-area: product_img;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    place-content: center;
+}
+
+#product_img img{
+    margin: auto;
+    width: 100%;
+}
+
+#product_detail {
+    grid-area: product_detail;
+}

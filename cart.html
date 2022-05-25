@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="signup.css" />
+    <link rel="stylesheet" href="cart.css" />
     <script src="index.js"></script>
     <script src="signup.js"></script>
     <title>SCP Shop</title>
@@ -40,47 +41,42 @@
         <a href="about.html" class="top_nav_link">Tuyển dụng</a>
       </div>
     </div>
-    <form id="main_form">
-      <div class="main_form_header">Đăng kí</div>
-      <input type="text" placeholder="Nhập tài khoản" class="text_input" />
-      <input type="email" placeholder="Nhập email" class="text_input" />
-      <input type="password" placeholder="Nhập mật khẩu" class="text_input" />
-      <input
-        type="password"
-        placeholder="Nhập lại mật khẩu"
-        class="text_input"
-      />
-      <input type="text" placeholder="Nhập họ tên" class="text_input" />
-      <input
-        type="text"
-        placeholder="Nhập ngày sinh"
-        onfocus="(this.type='date')"
-        onfocusout="(this.type='text')"
-        id="date_input"
-      />
-      <input type="text" placeholder="Nhập địa chỉ" class="text_input" />
-      <input type="text" placeholder="Nhập số điện thoại" class="text_input" />
-      <div class="checkbox_area" id="policy_checkbox_area">
-        <input type="checkbox" />
-        <div>Tôi chấp nhận chính sách thành viên</div>
+    <div id="cart">
+      <div id="cart_list">
+        <div class="cart_item">
+          <img src="./ao-thun-be-trai.jpg" alt="" class="cart_item_img" />
+          <div class="cart_item_info">
+            <div class="cart_item_name">Áo thun khủng long bé trai</div>
+            <div class="cart_item_price">Giá: 420.000 vnđ</div>
+          </div>
+        </div>
+        <div class="cart_item">
+          <img src="./ao-thun-be-trai.jpg" alt="" class="cart_item_img" />
+          <div class="cart_item_info">
+            <div class="cart_item_name">Áo thun khủng long bé trai</div>
+            <div class="cart_item_price">Giá: 420.000 vnđ</div>
+          </div>
+        </div>
+        <div class="cart_item">
+          <img src="./ao-thun-be-trai.jpg" alt="" class="cart_item_img" />
+          <div class="cart_item_info">
+            <div class="cart_item_name">Áo thun khủng long bé trai</div>
+            <div class="cart_item_price">Giá: 420.000 vnđ</div>
+          </div>
+        </div>
+        <div class="cart_item">
+          <img src="./ao-thun-be-trai.jpg" alt="" class="cart_item_img" />
+          <div class="cart_item_info">
+            <div class="cart_item_name">Áo thun khủng long bé trai</div>
+            <div class="cart_item_price">Giá: 420.000 vnđ</div>
+          </div>
+        </div>
       </div>
-      <div onclick="login()" class="button noselect" id="sup_button">
-        Đăng ký
+      <div id="cart_summary">
+        <button>Thanh toán trực tuyến</button
+        ><button>Thanh toán khi nhận hàng</button>
       </div>
-    </form>
-    <form id="second_form">
-      <div class="second_form_header">Đăng nhập</div>
-      <input type="text" placeholder="Nhập tài khoản" class="text_input" />
-      <input type="password" placeholder="Nhập mật khẩu" class="text_input" />
-      <div onclick="login()" class="button noselect">Đăng nhập</div>
-      <div id="form_text">Đăng nhập bằng cách khác</div>
-      <div id="social_button">
-        <a href=""><img src="./Facebook-Icon.png" alt="" /></a>
-        <a href=""><img src="./Google-Icon.png" alt="" /></a>
-        <a href=""><img src="./Twitter-Icon.png" alt="" /></a>
-        <a href=""><img src="./Zalo-Icon.png" alt="" /></a>
-      </div>
-    </form>
+    </div>
     <div id="footer">
       <div class="footer_item">
         <div class="footer_item_heading">

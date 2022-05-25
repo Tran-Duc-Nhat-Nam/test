@@ -3,8 +3,8 @@ body {
     "top top top" 
     ". main." 
     "footer footer footer" ;
-    grid-template-columns: 300px 1920px 300px;
-    grid-template-rows: 125px max-content 250px;
+    grid-template-columns: 1fr 1920px 1fr;
+    grid-template-rows: 100px max-content 200px;
 }
 
 #main_text {
@@ -14,6 +14,7 @@ body {
     gap: 25px;
     grid-template-columns: 1fr;
     height: max-content;
+    min-height: 68vh;
     padding: 50px 35px;
     place-content: start center;
 }
@@ -26,4 +27,10 @@ body {
     width: max-content;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 1600px) {
+    body {
+        grid-template-columns: 1fr 1500px 1fr;
+    }
 }

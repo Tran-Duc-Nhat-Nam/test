@@ -33,9 +33,10 @@ body {
     ". . main . . "  
     "footer footer footer footer footer" ;
     grid-template-columns: 220px 1fr 1280px 1fr 220px;
-    grid-template-rows: 100px 480px 700px max-content 250px;
+    grid-template-rows: 100px 480px 700px max-content 200px;
     height: max-content;
     letter-spacing: 0.05rem;
+    min-height: 100vh;
     opacity: 0;
     overflow: overlay;
     padding: 0px;
@@ -255,7 +256,8 @@ body > div {
 }
 
 #top_nav > a:hover {
-    background-color: skyblue;
+    border-bottom: 3px solid aqua;
+    color: aqua;
 }
 
 #current {
@@ -450,7 +452,7 @@ body > div {
     height: max-content;
     gap: 5px;
     grid-template-columns: 1fr;
-    padding-top: 50px;
+    padding-top: 30px;
     width: 100%;
 }
 
@@ -483,4 +485,51 @@ body > div {
 #social_button img {
     margin: auto;
     width: 35px;
+}
+
+@media screen and (max-width: 1600px) {
+    body {
+        grid-template-columns: 220px 1fr 960px 1fr 220px;
+        grid-template-rows: 100px 320px 700px max-content 200px;
+    }
+}
+ 
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-areas:     
+        "top" 
+        "main_panel" 
+        "footer" ;
+        grid-template-columns: 1fr;
+        grid-template-rows: 125px max-content 250px;
+    }
+
+    #header {
+        grid-template-columns: 55px 50px 50px 100px;
+    }
+
+    #brand {
+        display: none;
+    }
+
+    #signup_button {
+        display: none;
+    }
+
+    #login_button {
+        display: none;
+    }
+    
+    #slide_show {
+        display: none;
+    }
+
+    #side_nav {
+        display: none;
+    }
+
+    .footer_item {
+        font-size: 15px;
+        line-height: 20px;
+    }
 }

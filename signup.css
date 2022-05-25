@@ -10,8 +10,7 @@ body {
     ". . . ."
     "footer footer footer footer" ;
     grid-template-columns: 1fr 600px 300px 1fr;
-    grid-template-rows: 100px 1fr max-content 1fr 250px;
-    height: 100vh;
+    grid-template-rows: 100px 1fr max-content 1fr 200px;
 }
 
 form {
@@ -157,4 +156,19 @@ form {
 #form_text {
     margin-top: 25px;
     text-align: center;
+}
+
+#social_button a {
+    margin: auto;
+    width: 35px;
+}
+
+#social_button img {
+    width: 100%;
+}
+
+@media screen and (max-width: 1600px) {
+    body {
+        grid-template-columns: 1fr 750px 350px 1fr;
+    }
 }
