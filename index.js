@@ -63,3 +63,16 @@ function openSubNav(obj) {
     }
   }
 }
+
+function radio(button) {
+  var b = document.querySelectorAll(".radio_size");
+  b.forEach((element) => {
+    var o = window
+      .getComputedStyle(element)
+      .getPropertyValue("opacity");
+    if (o == 1) {
+      element.style.opacity = 0.5;
+    }
+  });
+  button.style.opacity = 1;
+}

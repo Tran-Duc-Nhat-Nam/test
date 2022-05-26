@@ -144,3 +144,25 @@ body {
         grid-template-columns: 1fr 300px 800px 300px 1fr;
     }
 }
+
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-areas: 
+        "top" 
+        "main" 
+        "footer" ;
+        grid-template-columns: 100%;
+        grid-template-rows: 60px max-content 200px;
+    }
+
+    #main_cate {
+        gap: 10px;
+        grid-area: main;
+        grid-template-areas: 
+        "main_cate_header main_cate_header main_cate_header";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 65px;
+        height: max-content;
+        padding: 0px;
+    }
+}

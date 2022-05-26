@@ -2,7 +2,10 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -47,23 +50,30 @@
         <a href="about.html" class="top_nav_link">Tuyển dụng</a>
       </div>
     </div>
-    <div id="side_nav">
-      <a href="category.html">Bộ sưu tập thời trang</a>
-      <a href="category.html">Quần áo bé trai</a>
-      <a href="category.html">Quần áo bé gái</a>
-      <a href="category.html">Quần áo trẻ sơ sinh</a>
-      <a href="category.html">Trang sức</a>
-      <a href="category.html">Phụ kiện</a>
+    <div id="super_side_nav">
+      <div id="side_nav">
+        <a href="category.html">Bộ sưu tập thời trang</a>
+        <a href="category.html">Quần áo bé trai</a>
+        <a href="category.html">Quần áo bé gái</a>
+        <a href="category.html">Quần áo trẻ sơ sinh</a>
+        <a href="category.html">Trang sức</a>
+        <a href="category.html">Phụ kiện</a>
+      </div>
     </div>
     <div id="product_img"><img src="./ao-thun-7-mau.jpg" alt="" /></div>
     <div id="product_detail">
-      <div>Tên sản phẩm</div>
-      <div>Giá</div>
-      <div>Tình trạng hàng hóa</div>
-      <div>Kích thước</div>
-      <div>Màu sắc</div>
-      <button>Mua ngay</button>
-      <button>Thêm vào giỏ hàng</button>
+      <div id="product_detail_name">Áo thun sọc ngang cầu vồng cho bé trai</div>
+      <div id="product_detail_price">Giá: 690.000 vnđ</div>
+      <div id="product_detail_status">Tình trạng hàng hóa: còn hàng</div>
+      <div id="product_detail_size">
+        Kích thước
+        <button onclick="radio(this)" class="radio_size">2Y - 3Y - 20kq</button>
+        <button onclick="radio(this)" class="radio_size">2Y - 3Y - 20kq</button>
+        <button onclick="radio(this)" class="radio_size">2Y - 3Y - 20kq</button>
+      </div>
+      <div id="product_detail_color">Màu sắc</div>
+      <button id="product_detail_buy">Mua ngay</button>
+      <button id="product_detail_cart">Thêm vào giỏ hàng</button>
     </div>
     <div id="footer">
       <div class="footer_item">
