@@ -141,6 +141,6 @@ body {
 
 @media screen and (max-width: 1600px) {
     body {
-        grid-template-columns: 1fr 300px 900px 300px 1fr;
+        grid-template-columns: 1fr 300px 800px 300px 1fr;
     }
 }

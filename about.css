@@ -3,7 +3,7 @@ body {
     "top top top" 
     ". main." 
     "footer footer footer" ;
-    grid-template-columns: 1fr 1920px 1fr;
+    grid-template-columns: 1fr 1900px 1fr;
     grid-template-rows: 100px max-content 200px;
 }
 

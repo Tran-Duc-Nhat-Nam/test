@@ -182,7 +182,7 @@ body > div {
     place-content: center;
 }
 
-#b_section > a {
+.pc_button {
     color: white;
     height: 100%;
     font-size: var(--font-size);
@@ -471,14 +471,14 @@ body > div {
 
 #social_button {
     display: grid;
-    grid-auto-flow: column;
-    grid-template-rows: 1fr;
-    margin: 25px auto;
+    grid-template-columns: 1fr 1fr;
+    margin: 25px 0px;
     width: 100%;
 }
 
 #social_button a {
     display: grid;
+    margin-bottom: 15px;
     width: 100%;
 }
 
@@ -492,13 +492,29 @@ body > div {
         grid-template-columns: 220px 1fr 960px 1fr 220px;
         grid-template-rows: 100px 320px 700px max-content 200px;
     }
+    
+    #footer {
+        gap: 0px;
+    }
+
+    #footer > * {
+        margin: 25px;
+    }
+
+    .footer_item {
+        padding-top: 25px;
+    }
+
+    #social_button a {
+        width: 50%;
+    }
 }
  
 @media screen and (max-width: 768px) {
     body {
         grid-template-areas:     
         "top" 
-        "main_panel" 
+        "main" 
         "footer" ;
         grid-template-columns: 1fr;
         grid-template-rows: 125px max-content 250px;
@@ -516,11 +532,7 @@ body > div {
         display: none;
     }
 
-    #login_button {
-        display: none;
-    }
-    
-    #slide_show {
+    .pc_button {
         display: none;
     }
 
@@ -528,8 +540,5 @@ body > div {
         display: none;
     }
 
-    .footer_item {
-        font-size: 15px;
-        line-height: 20px;
-    }
+
 }
