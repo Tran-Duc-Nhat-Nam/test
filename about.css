@@ -34,3 +34,14 @@ body {
         grid-template-columns: 1fr 1500px 1fr;
     }
 }
+
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-areas: 
+        "top" 
+        "main" 
+        "footer" ;
+        grid-template-columns: 100%;
+        grid-template-rows: 100px max-content 200px;
+    }
+}
