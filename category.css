@@ -149,10 +149,15 @@ body {
     body {
         grid-template-areas: 
         "top" 
+        "nav"
         "main" 
         "footer" ;
         grid-template-columns: 100%;
-        grid-template-rows: 60px max-content max-content;
+        grid-template-rows: 60px 50px max-content max-content;
+    }
+
+    #side_cate {
+        display: none;
     }
 
     #main_cate {
@@ -163,6 +168,6 @@ body {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 65px;
         height: max-content;
-        padding: 0px;
+        padding: 25px 0px;
     }
 }

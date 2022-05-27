@@ -46,11 +46,11 @@ function fade() {
   e.style.opacity = 1;
 }
 
-function openSubNav(obj) {
+function openSubNav(obj, child_class) {
   var children = obj.children;
   for (var i = 0; i < children.length; i++)
   {
-    if (children[i].classList.contains('side_cate_nav_sub_item'))
+    if (children[i].classList.contains(child_class))
     {
       if (window.getComputedStyle(children[i]).getPropertyValue("display") == 'none')
       {

@@ -39,9 +39,10 @@ body {
     body {
         grid-template-areas: 
         "top" 
+        "nav"
         "main" 
         "footer" ;
         grid-template-columns: 100%;
-        grid-template-rows: 60px max-content 200px;
+        grid-template-rows: 60px 50px max-content max-content;
     }
 }

@@ -177,11 +177,12 @@ form {
     body {
         grid-template-areas: 
         "top" 
+        "nav"
         "main_panel"
         "second_form"
         "footer" ;
         grid-template-columns: 100%;
-        grid-template-rows: 60px max-content max-content max-content;
+        grid-template-rows: 60px 50px max-content max-content max-content;
     }
 
     #main_form {

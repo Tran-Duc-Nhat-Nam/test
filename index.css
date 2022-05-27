@@ -93,11 +93,17 @@ body > div {
     place-content: center left;
 }
 
+#brand_logo a{
+    display: grid;
+    place-content: center;
+}
+
 #logo {
     filter: invert(var(--invert));
-    height: 50px;
     margin: auto 10px;
+    max-width: 60px;
     transition: transform 1s;
+    width: 100%;
 }
 
 #logo:hover {
@@ -262,6 +268,19 @@ body > div {
     color: aqua;
 }
 
+#phone_nav {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#phone_nav_header {
+    display: none;
+}
+
+.phone_nav_link{
+    display: none;
+}
+
 #slide_show {
     display: grid;
     grid-area: slide_show;
@@ -327,22 +346,19 @@ body > div {
     opacity: 1;
 }
 
-#super_side_nav {
-    display: block;
+#side_nav {
+    box-shadow: none;
+    background-color: transparent;
+    height: max-content;
+    grid-area: side_nav;
+    grid-template-columns: 1fr;
+    place-content: start;
     position: sticky;
     top: 100px;
 }
 
-#side_nav {
-    background-color: transparent;
-    box-shadow: none;
-    grid-area: side_nav;
-    grid-template-columns: 1fr;
-    place-content: start;
-}
-
-#side_nav > a {
-    background-color: var(--background-color);
+#side_nav > a{
+    background-color: white;
     box-shadow: var(--box-shadow);
     color: black;
     display: grid;
@@ -359,8 +375,8 @@ body > div {
     transform: translateX(15px);
 }
 
-#side_nav_top {
-    height: 50px;
+#side_nav_header {
+    display: none;
 }
 
 #main_panel {
@@ -500,14 +516,22 @@ body > div {
  
 @media screen and (max-width: 768px) {
     :root {
-        --font-size: 10px;
+        --font-size: 13px;
+    }
+
+    .hidden_on_PC {
+        display: grid;
+    }
+
+    .show_on_PC {
+        display: none;
     }
 
     body {
         gap: 0px;
         grid-template-areas:     
         "top" 
-        "ssn"
+        "nav"
         "main" 
         "footer" ;
         grid-template-columns: 100vw;
@@ -524,7 +548,15 @@ body > div {
     }
 
     #header {
-        grid-template-columns: 55px 50px 1fr 50px;
+        grid-template-columns: 60px 50px 1fr 50px;
+    }
+
+    #brand_logo {
+        place-content: center;
+    }
+
+    #logo {
+        margin: auto;
     }
 
     #brand {
@@ -543,39 +575,46 @@ body > div {
         display: none;
     }
 
+    #phone_nav {
+        background-image: linear-gradient(115deg, deepskyblue, violet);
+        display: grid;
+        grid-area: nav;
+        grid-template-columns: 100%;
+        place-content: start;
+        position: sticky;
+        top: 60px;
+        z-index: 10000;
+    }
+
+    #phone_nav_header {
+        background-image: linear-gradient(115deg, deepskyblue, violet);
+        color: white;
+        display: grid;
+        height: 50px;
+        place-content: center left;
+        text-indent: 25px;
+    }
+
+    .phone_nav_link {
+        background-color: white;
+        box-shadow: var(--box-shadow);
+        color: black;
+        display: none;
+        font-size: var(--font-size);
+        font-weight: bold;
+        height: 80px;
+        place-content: center left;
+        text-indent: 25px;
+        transition: transform 0.15s;
+        width: 100%;
+    }
+
     #slide_show {
         display: none;
     }
 
-    #super_side_nav {
-        background-color: dodgerblue;
-        border: none;
-        grid-area: ssn;
-        position: relative;
-        top: 0px;
-    }
-
-    #super_side_nav:hover {
-        position: sticky;
-        top: 0px;
-        z-index: 10001;
-    }
-
-    #super_side_nav:hover #side_nav{
-        background: deepskyblue;
-        display: grid;
-        position: absolute;
-        top: 50px;
-        width: 100%;
-        z-index: 10000;
-    }
-
     #side_nav {
         display: none;
-    }
-
-    #side_nav > a {
-        background-color: white;
     }
 
     #main_panel {
@@ -628,8 +667,26 @@ body > div {
     }
 
     #footer {
+        font-size: var(--font-size);
+        gap: 25px;
         grid-auto-flow: row;
         grid-template-columns: 100%;
         text-indent: 15px;
+    }
+
+    .footer_item {
+        text-align: center;
+        place-content: center;
+    }
+
+    #social_button {
+        margin: auto;
+        margin-bottom: 35px;
+        width: 50%;
+    }
+
+    #social_button a{
+        margin: auto;
+        place-content: center;
     }
 }

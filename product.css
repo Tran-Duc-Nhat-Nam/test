@@ -126,11 +126,12 @@ body {
     body {
         grid-template-areas: 
         "top" 
+        "nav"
         "product_img" 
         "product_detail" 
         "footer" ;
         grid-template-columns: 100%;
-        grid-template-rows: 60px max-content max-content max-content;
+        grid-template-rows: 60px 50px max-content max-content max-content;
     }
 
     #product_detail{

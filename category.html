@@ -50,12 +50,19 @@
         <a href="about.html" class="top_nav_link">Tuyển dụng</a>
       </div>
     </div>
+    <div onclick="openSubNav(this, 'phone_nav_link')" id="phone_nav">
+      <div id="phone_nav_header">Menu</div>
+      <a href="index.html" class="phone_nav_link">Trang chủ</a>
+      <a href="about.html" class="phone_nav_link">Giới thiệu</a>
+      <a href="category.html" class="phone_nav_link">Sản phẩm</a>
+      <a href="signup.html" class="phone_nav_link">Đăng ký</a>
+    </div>
     <div id="side_cate">
       <div id="side_cate_nav">
         <div class="side_cate_nav_header noselect">Menu</div>
         <div class="side_cate_nav_item noselect">
           <div
-            onclick="openSubNav(this.parentElement)"
+            onclick="openSubNav(this.parentElement, 'side_cate_nav_sub_item')"
             class="side_cate_nav_item_header"
           >
             Bộ sưu tập thời trang
@@ -285,9 +292,6 @@
         <a href="about.html" class="footer_item_text">Hỗ trợ nhân viên</a>
         <a href="about.html" class="footer_item_text">Tuyển dụng</a>
         <a href="about.html" class="footer_item_text">Khiếu nại</a>
-        <a href="about.html" class="footer_item_text"
-          >Đường dây nóng: 0391562489</a
-        >
       </div>
       <div class="footer_item">
         <div class="footer_item_heading">Kết nối với chúng tôi</div>
