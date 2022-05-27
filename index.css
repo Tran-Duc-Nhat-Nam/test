@@ -1,7 +1,7 @@
 :root {
     --background-color: rgb(255, 255, 255, 0.75);
     --foreground-color: black;
-    --font-size: 15px;
+    --font-size: 18px;
     --box-shadow: 1px 1px 5px rgb(88, 88, 88);
     --invert: 1;
 }
@@ -486,11 +486,7 @@ body > div {
     }
     
     #footer {
-        gap: 0px;
-    }
-
-    #footer > * {
-        margin: 25px;
+        gap: 50px;
     }
 
     .footer_item {
@@ -515,7 +511,7 @@ body > div {
         "main" 
         "footer" ;
         grid-template-columns: 100vw;
-        grid-template-rows: 60px 50px max-content 250px;
+        grid-template-rows: 60px 50px max-content max-content;
     }
 
     #top {
@@ -629,5 +625,11 @@ body > div {
     
     .main_section_content_item > img:hover {
         transform: scale(1.05);
+    }
+
+    #footer {
+        grid-auto-flow: row;
+        grid-template-columns: 100%;
+        text-indent: 15px;
     }
 }

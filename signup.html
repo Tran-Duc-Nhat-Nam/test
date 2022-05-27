@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="signup.css" />
     <script src="index.js"></script>
-    <script src="signup.js"></script>
     <title>SCP Shop</title>
   </head>
   <body onload="fade()" id="bd">
@@ -47,36 +46,71 @@
     </div>
     <form id="main_form">
       <div class="main_form_header">Đăng kí</div>
-      <input type="text" placeholder="Nhập tài khoản" class="text_input" />
+      <input
+        type="text"
+        placeholder="Nhập tên tài khoản"
+        class="signup_input text_input"
+      />
       <input type="email" placeholder="Nhập email" class="text_input" />
-      <input type="password" placeholder="Nhập mật khẩu" class="text_input" />
+      <input
+        type="password"
+        placeholder="Nhập mật khẩu"
+        class="signup_input text_input"
+        id="password_signup"
+      />
       <input
         type="password"
         placeholder="Nhập lại mật khẩu"
-        class="text_input"
+        class="signup_input text_input"
+        id="password_confirm"
       />
-      <input type="text" placeholder="Nhập họ tên" class="text_input" />
+      <input
+        type="text"
+        placeholder="Nhập họ tên"
+        class="signup_input text_input"
+      />
       <input
         type="text"
         placeholder="Nhập ngày sinh"
         onfocus="(this.type='date')"
         onfocusout="(this.type='text')"
+        class="signup_input"
         id="date_input"
       />
-      <input type="text" placeholder="Nhập địa chỉ" class="text_input" />
-      <input type="text" placeholder="Nhập số điện thoại" class="text_input" />
+      <input
+        type="text"
+        placeholder="Nhập địa chỉ"
+        class="signup_input text_input"
+      />
+      <input
+        type="number"
+        placeholder="Nhập số điện thoại"
+        class="signup_input text_input"
+      />
       <div class="checkbox_area" id="policy_checkbox_area">
-        <input type="checkbox" />
+        <input type="checkbox" id="policy_checkbox" />
         <div>Tôi chấp nhận chính sách thành viên</div>
       </div>
-      <div onclick="login()" class="button noselect" id="sup_button">
+      <div
+        onclick="signup('policy_checkbox')"
+        class="button noselect"
+        id="sup_button"
+      >
         Đăng ký
       </div>
     </form>
     <form id="second_form">
       <div class="second_form_header">Đăng nhập</div>
-      <input type="text" placeholder="Nhập tài khoản" class="text_input" />
-      <input type="password" placeholder="Nhập mật khẩu" class="text_input" />
+      <input
+        type="text"
+        placeholder="Nhập tài khoản"
+        class="login_input text_input"
+      />
+      <input
+        type="password"
+        placeholder="Nhập mật khẩu"
+        class="login_input text_input"
+      />
       <div onclick="login()" class="button noselect">Đăng nhập</div>
       <div id="form_text">Đăng nhập bằng cách khác</div>
       <div id="social_button">
@@ -88,15 +122,11 @@
     </form>
     <div id="footer">
       <div class="footer_item">
-        <div class="footer_item_heading">
-          Công ty TNHH Marshall, Carter và Dark
-        </div>
-        <div class="footer_item_text">
-          Địa chỉ trụ sở: 420/69 Ngụy Như Kon Tum, Phường 13, Thành phố Thủ Đức,
-          Thành phố Hồ Chí Minh
-        </div>
-        <div class="footer_item_text">SĐT: 0366764749</div>
-        <div class="footer_item_text">Email: TenBrotherHao@scp.com</div>
+        <div class="footer_item_heading">Nhóm 7</div>
+        <div class="footer_item_text">Thành viên:</div>
+        <div class="footer_item_text">Trần Đức Nhật Nam - MSSV: 2001206925</div>
+        <div class="footer_item_text">Kiều Đạo Nhất San - MSSV: 2001206997</div>
+        <div class="footer_item_text">Thập Anh Hào - MSSV: 2001206982</div>
       </div>
       <div class="footer_item">
         <div class="footer_item_heading">Về SCP Shop</div>

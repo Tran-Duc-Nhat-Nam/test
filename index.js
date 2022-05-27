@@ -64,15 +64,75 @@ function openSubNav(obj) {
   }
 }
 
-function radio(button) {
-  var b = document.querySelectorAll(".radio_size");
+function radio(button, radio_button, checked_button) {
+  var b = document.querySelectorAll(radio_button);
   b.forEach((element) => {
-    var o = window
-      .getComputedStyle(element)
-      .getPropertyValue("opacity");
-    if (o == 1) {
-      element.style.opacity = 0.5;
+    if (element.classList.contains(checked_button)) 
+    {
+      element.classList.remove(checked_button);
     }
   });
-  button.style.opacity = 1;
+
+  button.classList.add(checked_button)
+}
+
+function notify(text) {
+  alert(text)
+}
+
+function signup(check_box_id) {
+  var b = document.querySelectorAll('.signup_input');
+  var check = true;
+
+  b.forEach((element) => {
+    console.log(element.value);
+    if (element == null || element.value == '') 
+    {
+      check = false
+    }
+  });
+
+  var p = document.getElementById('password_signup');
+  var pc = document.getElementById('password_confirm');
+
+  if (document.getElementById(check_box_id).checked == true && check == true && p.value == pc.value)
+  {
+    alert('Đăng ký tài khoản thành công');
+    window.open('./index.html','_self')
+  }
+  else if (check == false)
+  {
+    alert('Vui lòng nhập đầy đủ thông tin');
+  }
+  else if (p.value != pc.value)
+  {
+    alert('Mật khẩu không trùng khớp');
+  }
+  else
+  {   
+    alert('Vui lòng chấp nhận điều khoản sử dụng');
+  }
+}
+
+function login() {
+  var b = document.querySelectorAll('.login_input');
+  var check = true;
+
+  b.forEach((element) => {
+    console.log(element.value);
+    if (element == null || element.value == '') 
+    {
+      check = false
+    }
+  });
+
+  if (check == true)
+  {
+    alert('Đăng nhập thành công');
+    window.open('./index.html','_self')
+  }
+  else
+  {
+    alert('Vui lòng nhập đầy đủ thông tin');
+  }
 }

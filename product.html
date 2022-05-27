@@ -41,7 +41,7 @@
         </div>
       </div>
       <div id="top_nav">
-        <a href="#" class="top_nav_link" id="current">Trang chủ</a>
+        <a href="index.html" class="top_nav_link">Trang chủ</a>
         <a href="about.html" class="top_nav_link">Giới thiệu</a>
         <a href="about.html" class="top_nav_link">Khuyến mãi</a>
         <a href="category.html" class="top_nav_link">Sản phẩm</a>
@@ -60,32 +60,75 @@
         <a href="category.html">Phụ kiện</a>
       </div>
     </div>
-    <div id="product_img"><img src="./ao-thun-7-mau.jpg" alt="" /></div>
+    <div id="product_img"><img src="./ao-thun-la-phong.jpg" alt="" /></div>
     <div id="product_detail">
-      <div id="product_detail_name">Áo thun sọc ngang cầu vồng cho bé trai</div>
-      <div id="product_detail_price">Giá: 690.000 vnđ</div>
-      <div id="product_detail_status">Tình trạng hàng hóa: còn hàng</div>
-      <div id="product_detail_size">
-        Kích thước
-        <button onclick="radio(this)" class="radio_size">2Y - 3Y - 20kq</button>
-        <button onclick="radio(this)" class="radio_size">2Y - 3Y - 20kq</button>
-        <button onclick="radio(this)" class="radio_size">2Y - 3Y - 20kq</button>
+      <div class="product_detail_item" id="product_detail_name">
+        Áo thun khủng long cho bé trai
       </div>
-      <div id="product_detail_color">Màu sắc</div>
-      <button id="product_detail_buy">Mua ngay</button>
-      <button id="product_detail_cart">Thêm vào giỏ hàng</button>
+      <div class="product_detail_item" id="product_detail_price">
+        Giá: 690.000 vnđ
+      </div>
+      <div class="product_detail_item" id="product_detail_status">
+        Tình trạng hàng hóa: còn hàng
+      </div>
+      <div class="product_detail_item" id="product_detail_size">
+        Kích thước
+        <button
+          onclick="radio(this, '.radio_size', 'checked_radio_size')"
+          class="radio_size checked_radio_size"
+        >
+          2Y - 3Y - 20kq
+        </button>
+        <button
+          onclick="radio(this, '.radio_size', 'checked_radio_size')"
+          class="radio_size"
+        >
+          2Y - 3Y - 20kq
+        </button>
+        <button
+          onclick="radio(this, '.radio_size', 'checked_radio_size')"
+          class="radio_size"
+        >
+          2Y - 3Y - 20kq
+        </button>
+      </div>
+      <div class="product_detail_item" id="product_detail_color">
+        Màu sắc:
+        <button
+          onclick="radio(this, '.radio_color', 'checked_radio_color')"
+          class="radio_color checked_radio_color"
+        >
+          2Y - 3Y - 20kq
+        </button>
+        <button
+          onclick="radio(this, '.radio_color', 'checked_radio_color')"
+          class="radio_color"
+        >
+          2Y - 3Y - 20kq
+        </button>
+        <button
+          onclick="radio(this, '.radio_color', 'checked_radio_color')"
+          class="radio_color"
+        >
+          2Y - 3Y - 20kq
+        </button>
+      </div>
+      <a href="cart.html" class="button" id="product_detail_buy">Mua ngay</a>
+      <button
+        onclick="notify('Thêm vào giỏ hàng thành công')"
+        class="button"
+        id="product_detail_cart"
+      >
+        Thêm vào giỏ hàng
+      </button>
     </div>
     <div id="footer">
       <div class="footer_item">
-        <div class="footer_item_heading">
-          Công ty TNHH Marshall, Carter và Dark
-        </div>
-        <div class="footer_item_text">
-          Địa chỉ trụ sở: 420/69 Ngụy Như Kon Tum, Phường 13, Thành phố Thủ Đức,
-          Thành phố Hồ Chí Minh
-        </div>
-        <div class="footer_item_text">SĐT: 0366764749</div>
-        <div class="footer_item_text">Email: TenBrotherHao@scp.com</div>
+        <div class="footer_item_heading">Nhóm 7</div>
+        <div class="footer_item_text">Thành viên:</div>
+        <div class="footer_item_text">Trần Đức Nhật Nam - MSSV: 2001206925</div>
+        <div class="footer_item_text">Kiều Đạo Nhất San - MSSV: 2001206997</div>
+        <div class="footer_item_text">Thập Anh Hào - MSSV: 2001206982</div>
       </div>
       <div class="footer_item">
         <div class="footer_item_heading">Về SCP Shop</div>

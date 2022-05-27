@@ -24,32 +24,37 @@ body {
 #product_detail {
     grid-area: product_detail;
     grid-template-columns: 100%;
+    height: max-content;
     padding: 15px;
+    padding-bottom: 35px;
     place-content: start center;
+}
+
+.product_detail_item {
+    font-size: calc(var(--font-size) + 5px);
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
 #product_detail_name {
     background-image: linear-gradient(115deg, deepskyblue, violet);
     color: white;
     font-size: calc(var(--font-size) + 15px);
-    padding: 10px;
-    text-align: left;
+    font-weight: bolder;
+    padding: 15px;
 }
 
 #product_detail_price {
     color: sandybrown;
     font-size: calc(var(--font-size) + 10px);
-    padding: 10px;
-    text-align: left;
 }
 
 #product_detail_size {
     display: grid;
-    font-size: calc(var(--font-size) + 10px);
+    font-size: calc(var(--font-size) + 5px);
     gap: 10px;
     grid-template-columns: 100%;
-    padding: 10px;
-    text-align: left;
 }
 
 .radio_size {
@@ -62,10 +67,74 @@ body {
     width: max-content;
 }
 
-.radio_size:hover {
-    background-color: aliceblue;
+.checked_radio_size {
+    background-color: dodgerblue;
+    color: white;
 }
 
-.radio_size:active {
-    background-color: lightskyblue;
+#product_detail_color {
+    display: grid;
+    font-size: calc(var(--font-size) + 5px);
+    gap: 10px;
+    grid-template-columns: 100%;
+    margin-bottom: 25px;
+}
+
+.radio_color {
+    background-color: white;
+    border: 3px solid violet;
+    border-radius: 5px;
+    color: violet;
+    font-size: calc(var(--font-size) + 5px);
+    padding: 10px;
+    width: max-content;
+}
+
+.checked_radio_color {
+    background-color: violet;
+    color: white;
+}
+
+.button {
+    background-image: linear-gradient(115deg, dodgerblue, fuchsia);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px gray;
+    color: white;
+    display: grid;
+    font-size: 15px;
+    font-weight: bolder;
+    height: 40px;
+    margin: auto;
+    margin-top: 20px;
+    place-content: center;
+    width: 80%;
+}
+
+.button:active {
+    box-shadow: none;
+    transform: translate(1px, 1px);
+}
+
+@media screen and (max-width: 1600px) {
+    body {
+        grid-template-columns: 220px 1fr 800px 400px 2fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-areas: 
+        "top" 
+        "product_img" 
+        "product_detail" 
+        "footer" ;
+        grid-template-columns: 100%;
+        grid-template-rows: 60px max-content max-content max-content;
+    }
+
+    #product_detail{
+        padding: 0px;
+        padding-bottom: 24px;
+    }
 }

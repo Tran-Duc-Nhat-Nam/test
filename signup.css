@@ -172,3 +172,24 @@ form {
         grid-template-columns: 1fr 750px 350px 1fr;
     }
 }
+
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-areas: 
+        "top" 
+        "main_panel"
+        "second_form"
+        "footer" ;
+        grid-template-columns: 100%;
+        grid-template-rows: 60px max-content max-content max-content;
+    }
+
+    #main_form {
+        margin: 25px 0px;
+    }
+
+    #second_form {
+        display: none;
+        margin-bottom: 25px;
+    }
+}
