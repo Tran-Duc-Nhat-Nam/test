@@ -5,7 +5,7 @@ body {
     ". . product_img product_detail . " 
     "footer footer footer footer footer" ;
     grid-template-columns: 220px 1fr 1000px 500px 2fr;
-    grid-template-rows: 100px max-content max-content 200px;
+    grid-template-rows: 100px max-content max-content max-content;
 }
 
 #product_img {
@@ -50,7 +50,12 @@ body {
     font-size: calc(var(--font-size) + 10px);
 }
 
-#product_detail_size {
+#radio_group {
+    display: grid;
+    grid-auto-flow: column
+}
+
+#radio_group > div{
     display: grid;
     font-size: calc(var(--font-size) + 5px);
     gap: 10px;
@@ -70,14 +75,6 @@ body {
 .checked_radio_size {
     background-color: dodgerblue;
     color: white;
-}
-
-#product_detail_color {
-    display: grid;
-    font-size: calc(var(--font-size) + 5px);
-    gap: 10px;
-    grid-template-columns: 100%;
-    margin-bottom: 25px;
 }
 
 .radio_color {
@@ -102,7 +99,7 @@ body {
     box-shadow: 2px 2px 4px gray;
     color: white;
     display: grid;
-    font-size: 15px;
+    font-size: var(--font-size);
     font-weight: bolder;
     height: 40px;
     margin: auto;

@@ -10,7 +10,7 @@ body {
     ". . . ."
     "footer footer footer footer" ;
     grid-template-columns: 1fr 600px 300px 1fr;
-    grid-template-rows: 100px 1fr max-content 1fr 200px;
+    grid-template-rows: 100px 1fr max-content 1fr max-content;
 }
 
 form {
@@ -43,14 +43,14 @@ form {
 }
 
 .second_form_header {
-    font-size: 25px;
+    font-size: calc(var(--font-size) + 10px);
     font-weight: bolder;
     margin: 10px auto;
     text-align: center;
 }
 
 .main_form_header {
-    font-size: 25px;
+    font-size: calc(var(--font-size) + 10px);
     font-weight: bolder;
     grid-area: main_form_header;
     margin: 10px auto;
@@ -63,7 +63,7 @@ form {
     border-radius: 5px;
     box-shadow: inset 1px 1px 5px lightgray;
     color: black;
-    font-size: 15px;
+    font-size: var(--font-size);
     height: 40px;
     margin: 10px auto;
     opacity: 0.7;
@@ -87,7 +87,7 @@ form {
     border: 3px solid rgb(255, 255, 255, 0);
     border-radius: 5px;
     box-shadow: inset 1px 1px 5px lightgray;
-    font-size: 15px;
+    font-size: var(--font-size);
     height: 40px;
     margin: 10px auto;
     opacity: 0.7;
@@ -132,7 +132,7 @@ form {
     box-shadow: 2px 2px 4px gray;
     color: white;
     display: grid;
-    font-size: 15px;
+    font-size: var(--font-size);
     font-weight: bolder;
     height: 40px;
     margin: auto;

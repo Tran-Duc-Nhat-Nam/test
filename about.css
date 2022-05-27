@@ -4,7 +4,7 @@ body {
     ". main." 
     "footer footer footer" ;
     grid-template-columns: 1fr 1900px 1fr;
-    grid-template-rows: 100px max-content 200px;
+    grid-template-rows: 100px max-content max-content;
 }
 
 #main_text {

@@ -5,7 +5,7 @@ body {
     ". side main ."  
     "footer footer footer footer" ;
     grid-template-columns: 1fr 350px 1350px 1fr;
-    grid-template-rows: 100px 700px max-content 200px;
+    grid-template-rows: 100px 700px max-content max-content;
 }
 
 #side_cate {
@@ -35,7 +35,7 @@ body {
     border: 3px solid white;
     color: white;
     display: grid;
-    font-size: 24px;
+    font-size: calc(var(--font-size) + 7px);
     font-weight: bold;
     height: 65px;
     letter-spacing:2px;
@@ -48,7 +48,7 @@ body {
     background-color: white;
     border: 3px solid white;
     display: grid;
-    font-size: 18px;
+    font-size: calc(var(--font-size) + 5px);
     height: 50px;
     margin-left: -2px;
     place-content: center left;
@@ -60,7 +60,6 @@ body {
     color: black;
     display: grid;
     font-size: var(--font-size);
-    font-weight: bold;
     grid-template-columns: 1fr;
     height: max-content;
     place-content: center left;
@@ -115,7 +114,7 @@ body {
     background-image: linear-gradient(115deg, aqua, fuchsia);
     color: white;
     display: grid;
-    font-size: 25px;
+    font-size: calc(var(--font-size) + 5px);
     font-weight: bolder;
     grid-area: main_cate_header;
     height: 100%;
@@ -127,7 +126,7 @@ body {
 .main_cate_item {
     background-color: white;
     display: grid;
-    font-size: 15px;
+    font-size: var(--font-size);
     gap: 10px;
     margin: 15px auto;
     text-align: center;

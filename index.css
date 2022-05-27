@@ -1,7 +1,7 @@
 :root {
     --background-color: rgb(255, 255, 255, 0.75);
     --foreground-color: black;
-    --font-size: 18px;
+    --font-size: 15px;
     --box-shadow: 1px 1px 5px rgb(88, 88, 88);
     --invert: 1;
 }
@@ -24,6 +24,7 @@ a {
 body {
     background-image: linear-gradient(115deg, MistyRose, PowderBlue);
     display: grid;
+    font-size: var(--font-size);
     font-family: 'Roboto', sans-serif;
     gap: 25px;
     grid-template-areas: 
@@ -33,7 +34,7 @@ body {
     ". . main . . "  
     "footer footer footer footer footer" ;
     grid-template-columns: 220px 1fr 1280px 1fr 220px;
-    grid-template-rows: 100px 480px 700px max-content 200px;
+    grid-template-rows: max-content 480px 700px max-content max-content;
     height: max-content;
     letter-spacing: 0.05rem;
     min-height: 100vh;
@@ -150,7 +151,7 @@ body > div {
     border: none;
     border-radius: 15px;
     float: left;
-    font-size: 12px;
+    font-size: calc(var(--font-size) - 3px);
     height: 65%;
     outline: none;
     padding-top: 5px;
@@ -211,7 +212,7 @@ body > div {
 
 #signup_button {
     background-color: violet;
-    width: 135px;
+    width: 150px;
 }
 
 #signup_button:hover {
@@ -224,7 +225,7 @@ body > div {
 
 #login_button {
     background-color: mediumslateblue;
-    width: 135px;
+    width: 150px;
 }
 
 #login_button:hover {
