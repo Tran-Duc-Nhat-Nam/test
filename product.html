@@ -120,6 +120,12 @@
           </button>
         </div>
       </div>
+      <div class="product_detail_item" id="cart_item_amount">
+        <div id="cart_item_amount_label">Số lượng sản phẩm:</div>
+        <button onclick="adjustNumber('cart_item_amount_input', -1)">-</button>
+        <input type="number" value="1" id="cart_item_amount_input" />
+        <button onclick="adjustNumber('cart_item_amount_input', 1)">+</button>
+      </div>
       <a href="cart.html" class="button" id="product_detail_buy">Mua ngay</a>
       <button
         onclick="notify('Thêm vào giỏ hàng thành công')"

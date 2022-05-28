@@ -96,6 +96,45 @@ body {
     color: white;
 }
 
+#cart_item_amount {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr;
+    height: 35px;
+    place-content: center left;
+}
+
+#cart_item_amount_label{
+    margin: auto;
+    margin-right: 15px;
+}
+
+#cart_item_amount_input {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    text-indent: 5px;
+    width: calc(var(--font-size) * 3);
+}
+
+#cart_item_amount_input:focus {
+    outline: none;
+}
+
+#cart_item_amount button {
+    background-color: transparent;
+    border: none;
+    color: deepskyblue;
+    font-size: calc(var(--font-size) * 2);
+    font-weight: bolder;
+    outline: none;
+    transition: 0.15s;
+    width: calc(var(--font-size) * 2);
+}
+
+#cart_item_amount button:active {
+    transform: scale(1.2, 1.2);
+}
+
 .button {
     background-image: linear-gradient(115deg, dodgerblue, fuchsia);
     border: none;

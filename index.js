@@ -136,3 +136,11 @@ function login() {
     alert('Vui lòng nhập đầy đủ thông tin');
   }
 }
+
+function adjustNumber(number_input_id, adjust_value) {
+  var obj = document.getElementById(number_input_id);
+  var a = parseInt(obj.value);
+  var b = parseInt(adjust_value);
+  console.log('a + b' + a + "+");
+  obj.value = a + b;
+}
