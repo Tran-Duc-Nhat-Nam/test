@@ -81,6 +81,8 @@ body {
 #cart_summary {
     background-color: var(--background-color);
     display: grid;
+    font-size: calc(var(--font-size) + 2px);
+    font-weight: bold;
     gap: 15px;
     grid-template-columns: 1fr;
     padding: 25px;
