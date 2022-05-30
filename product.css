@@ -46,8 +46,12 @@ body {
 }
 
 #product_detail_price {
+    display: grid;
     color: sandybrown;
     font-size: calc(var(--font-size) + 10px);
+    grid-auto-flow: column;
+    grid-template-rows: 1fr;
+    place-content: center left;
 }
 
 #radio_group {

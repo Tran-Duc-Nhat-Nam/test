@@ -133,6 +133,10 @@ body {
     padding: 10px;
 }
 
+.main_cate_item_name {
+    font-size: calc(var(--font-size) + 2px);
+}
+
 .main_cate_item img{
     width: 100%;
     margin: auto;
