@@ -14,11 +14,16 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     place-content: center;
+    transition: 0.2s;
 }
 
 #product_img img{
     margin: auto;
     width: 100%;
+}
+
+#product_img:hover{
+    transform: scale(1.01, 1.01);
 }
 
 #product_detail {

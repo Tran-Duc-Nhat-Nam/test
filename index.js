@@ -47,18 +47,22 @@ function fade() {
 }
 
 function openSubNav(obj, child_class) {
-  var children = obj.children;
-  for (var i = 0; i < children.length; i++)
+  console.log(window.getComputedStyle(obj).getPropertyValue('background-color'))
+  if (window.getComputedStyle(obj).getPropertyValue('background-color') != 'rgba(0, 0, 0, 0)')
   {
-    if (children[i].classList.contains(child_class))
+    var children = obj.children;
+    for (var i = 0; i < children.length; i++)
     {
-      if (window.getComputedStyle(children[i]).getPropertyValue("display") == 'none')
+      if (children[i].classList.contains(child_class))
       {
-        children[i].style.display = 'grid';
-      }
-      else
-      {
-        children[i].style.display = 'none';
+        if (window.getComputedStyle(children[i]).getPropertyValue("display") == 'none')
+        {
+          children[i].style.display = 'grid';
+        }
+        else
+        {
+          children[i].style.display = 'none';
+        }
       }
     }
   }

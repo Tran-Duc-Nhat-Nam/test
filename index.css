@@ -205,11 +205,11 @@ body > div {
 #cart_button_img {
     filter: invert();
     height: 35px;
-    transition: height 0.2s;
+    transition: 0.2s;
 }
 
 #cart_button_img:hover {
-    height: 40px;
+    transform: scale(1.1, 1.1);
 }
 
 #cart_button_img:active {
@@ -262,7 +262,7 @@ body > div {
     height: 96.5%;
     padding: 0px 50px;
     place-content: center;
-    transition: background-color 0.2s;
+    transition: 0.15s;
 }
 
 #top_nav > a:hover {
@@ -584,7 +584,9 @@ body > div {
 
     #phone_nav {
         background-image: linear-gradient(115deg, deepskyblue, violet);
+        background-color: white;
         display: grid;
+        font-size: calc(var(--font-size) + 5px);
         grid-area: nav;
         grid-template-columns: 100%;
         place-content: start;
